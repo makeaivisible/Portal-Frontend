@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Make AI Visible Upload Prototype</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="shell">
+      <section class="intro" aria-labelledby="page-title">
+        <p class="eyebrow">Make AI Visible MVP</p>
+        <h1 id="page-title">Donate an AI conversation safely</h1>
+        <p>
+          Upload a conversation export to test the privacy-first submission flow. This
+          prototype uses synthetic local handling and does not send files anywhere.
+        </p>
+      </section>
+
+      <section class="panel" aria-labelledby="consent-title">
+        <h2 id="consent-title">Before you upload</h2>
+        <ul class="checklist">
+          <li>Use an export file, not screenshots or passwords.</li>
+          <li>Remove anything you already know is private before uploading.</li>
+          <li>Raw conversation text is meant for anonymization, not publication.</li>
+          <li>Public results should be aggregate and privacy-protected.</li>
+        </ul>
+        <label class="consent">
+          <input id="consent" type="checkbox" />
+          <span>I understand this is a draft research upload flow using synthetic testing.</span>
+        </label>
+      </section>
+
+      <section class="panel" aria-labelledby="upload-title">
+        <h2 id="upload-title">Upload export</h2>
+        <div class="dropzone">
+          <input id="file-input" type="file" accept=".json,.txt,.csv,.zip" />
+          <p id="file-summary">Choose a ChatGPT, Claude, Gemini, or Copilot export file.</p>
+        </div>
+        <button id="submit-button" type="button" disabled>Validate and anonymize</button>
+        <p id="status" class="status" role="status">Waiting for consent and a file.</p>
+      </section>
+
+      <section class="panel" aria-labelledby="guidance-title">
+        <h2 id="guidance-title">Export guidance</h2>
+        <div class="guidance-grid">
+          <article>
+            <h3>ChatGPT</h3>
+            <p>Use the data export option from settings and upload the downloaded export file.</p>
+          </article>
+          <article>
+            <h3>Claude</h3>
+            <p>Export or copy a conversation into a supported text or JSON file when available.</p>
+          </article>
+          <article>
+            <h3>Gemini</h3>
+            <p>Use account export tools where available and avoid sharing account credentials.</p>
+          </article>
+          <article>
+            <h3>Copilot</h3>
+            <p>Export conversation history only if your account and product settings allow it.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="panel result-panel" aria-labelledby="result-title">
+        <h2 id="result-title">Mock anonymization result</h2>
+        <pre id="result">No file processed yet.</pre>
+      </section>
+    </main>
+    <script src="src/app.js"></script>
+  </body>
+</html>

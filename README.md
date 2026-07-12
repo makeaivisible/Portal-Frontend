@@ -26,3 +26,22 @@ The frontend should never persist raw conversation exports beyond the active upl
 ## First Milestone
 
 Build a static, mobile-first upload prototype wired to a mock anonymization endpoint, with consent copy and export instructions ready for review.
+
+## Current Prototype
+
+This repo now includes a static upload prototype that can be opened directly in a browser:
+
+```bash
+open index.html
+```
+
+The prototype includes:
+
+- Plain-language consent and privacy reminders.
+- File selection for supported export-like formats: JSON, TXT, CSV, and ZIP.
+- Validation, ready, and mock-success states.
+- Platform guidance for ChatGPT, Claude, Gemini, and Copilot.
+- A mock anonymization result that documents the intended `POST /anonymize` boundary.
+
+No file is uploaded or persisted by this static prototype. It is meant to validate the
+contributor-facing flow before connecting to a deployed anonymization service.

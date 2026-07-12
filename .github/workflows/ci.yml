@@ -13,7 +13,5 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: "22"
-      - name: Placeholder
-        run: |
-          node --version
-          echo "Add linting and tests with the first implementation PR."
+      - name: Validate static prototype
+        run: node scripts/validate.mjs
