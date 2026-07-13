@@ -1,6 +1,10 @@
-# Portal Frontend
+# Portal Frontend Preview
 
-Mobile-first submission portal for Make AI Visible.
+Developer preview for a future Make AI Visible upload portal.
+
+The live public website is [makeaivisible.org](https://makeaivisible.org). This
+repository is not the live website today; it holds a small GitHub-hosted reference
+prototype for the future privacy-first upload flow.
 
 This repository owns the contributor-facing flow for teens who want to donate AI conversation exports to research. The MVP focuses on a no-login upload path, clear consent language, platform-specific export guidance, and accessible status feedback.
 
@@ -29,13 +33,13 @@ Build a static, mobile-first upload prototype wired to a mock anonymization endp
 
 ## Current Prototype
 
-This repo now includes a static upload prototype that can be opened directly in a browser:
+This repo includes a static upload preview that can be opened directly in a browser:
 
 ```bash
 open index.html
 ```
 
-The prototype includes:
+The preview includes:
 
 - Plain-language consent and privacy reminders.
 - File selection for supported export-like formats: JSON, TXT, CSV, and ZIP.
@@ -43,8 +47,9 @@ The prototype includes:
 - Platform guidance for ChatGPT, Claude, Gemini, and Copilot.
 - A mock anonymization result that documents the intended `POST /anonymize` boundary.
 
-No file is uploaded or persisted by this static prototype. It is meant to validate the
-contributor-facing flow before connecting to a deployed anonymization service.
+No file is uploaded or persisted by this static preview. It is meant to help developers
+understand the future contributor-facing flow before it is integrated with the live site
+and a deployed anonymization service.
 
 ## Developer Notes
 

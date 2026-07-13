@@ -20,7 +20,7 @@ function updateState() {
   const hasConsent = consent.checked;
 
   if (!file) {
-    fileSummary.textContent = "Choose a ChatGPT, Claude, Gemini, or Copilot export file.";
+    fileSummary.textContent = "Choose a synthetic ChatGPT, Claude, Gemini, or Copilot export file.";
     statusText.textContent = hasConsent ? "Waiting for a file." : "Waiting for consent and a file.";
     submitButton.disabled = true;
     return;
@@ -42,11 +42,12 @@ function mockAnonymize() {
   const file = selectedFile();
   if (!file) return;
 
-  statusText.textContent = "Validated locally. Mock anonymization complete.";
+  statusText.textContent = "Validated locally. This is a GitHub preview, not the live site.";
   result.textContent = JSON.stringify(
     {
-      upload_status: "accepted_for_mock_processing",
+      upload_status: "preview_only",
       file_name: file.name,
+      live_website: "https://makeaivisible.org",
       anonymization_service: "POST /anonymize",
       raw_file_persisted: false,
       next_review_step: "privacy review before scoring or publication",

@@ -10,7 +10,7 @@ for (const path of requiredFiles) {
 }
 
 const html = await readFile("index.html", "utf8");
-for (const needle of ["consent", "file-input", "submit-button", "Mock anonymization result"]) {
+for (const needle of ["consent", "file-input", "submit-button", "makeaivisible.org"]) {
   if (!html.includes(needle)) {
     throw new Error(`index.html is missing ${needle}`);
   }

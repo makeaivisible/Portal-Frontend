@@ -1,14 +1,14 @@
 # Portal Prototype Code
 
-This folder holds the small JavaScript layer for the static upload prototype.
+This folder holds the small JavaScript layer for the static upload preview.
 
 ## What `app.js` Does
 
 - Reads the consent checkbox and file input from `index.html`.
 - Enables the submit button only when consent is checked and a supported file is chosen.
 - Accepts export-like file extensions: `.json`, `.txt`, `.csv`, and `.zip`.
-- Shows status text for waiting, unsupported file, ready, and mock-success states.
-- Writes a mock anonymization result into the page.
+- Shows status text for waiting, unsupported file, ready, and preview states.
+- Writes a preview-only anonymization result into the page.
 
 ## What It Does Not Do Yet
 
@@ -18,6 +18,6 @@ This folder holds the small JavaScript layer for the static upload prototype.
 
 ## First Place To Edit
 
-Start in `app.js` if you are changing upload validation or connecting this prototype to
+Start in `app.js` if you are changing upload validation or connecting this preview to
 the anonymization service. Keep privacy language in `index.html` aligned with the
 governance repo before accepting real submissions.
