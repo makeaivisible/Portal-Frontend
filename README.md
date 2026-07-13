@@ -45,3 +45,8 @@ The prototype includes:
 
 No file is uploaded or persisted by this static prototype. It is meant to validate the
 contributor-facing flow before connecting to a deployed anonymization service.
+
+## Developer Notes
+
+- [src/README.md](src/README.md) explains the upload prototype JavaScript.
+- [scripts/README.md](scripts/README.md) explains the lightweight CI validation.
