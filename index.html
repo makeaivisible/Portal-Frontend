@@ -3,62 +3,75 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Make AI Visible Upload Prototype</title>
+    <title>Make AI Visible Portal Preview</title>
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
     <main class="shell">
       <section class="intro" aria-labelledby="page-title">
-        <p class="eyebrow">Make AI Visible MVP</p>
-        <h1 id="page-title">Donate an AI conversation safely</h1>
+        <p class="eyebrow">GitHub portal preview</p>
+        <h1 id="page-title">The connector portal is coming soon</h1>
         <p>
-          Upload a conversation export to test the privacy-first submission flow. This
-          prototype uses synthetic local handling and does not send files anywhere.
+          The live Make AI Visible website is already available at
+          <a href="https://makeaivisible.org">makeaivisible.org</a>. This GitHub repo
+          holds a simple developer preview of the future privacy-first connector flow.
+        </p>
+        <a class="site-link" href="https://makeaivisible.org">Visit the live website</a>
+      </section>
+
+      <section class="panel" aria-labelledby="future-title">
+        <h2 id="future-title">Final MVP direction</h2>
+        <p class="panel-copy">
+          The final MVP should connect to major LLM platforms directly. Contributors will
+          authorize connectors once, then eligible chats can sync in the background and
+          results can be viewed on the website. Manual uploads are a fallback for early
+          testing, not the intended long-term experience.
         </p>
       </section>
 
       <section class="panel" aria-labelledby="consent-title">
-        <h2 id="consent-title">Before you upload</h2>
+        <h2 id="consent-title">Before any sync or upload</h2>
         <ul class="checklist">
-          <li>Use an export file, not screenshots or passwords.</li>
-          <li>Remove anything you already know is private before uploading.</li>
+          <li>Connectors should be opt-in, revocable, and clear about what is collected.</li>
+          <li>Manual uploads should use export files, not screenshots or passwords.</li>
+          <li>Remove anything you already know is private before upload or sync.</li>
           <li>Raw conversation text is meant for anonymization, not publication.</li>
           <li>Public results should be aggregate and privacy-protected.</li>
         </ul>
         <label class="consent">
           <input id="consent" type="checkbox" />
-          <span>I understand this is a draft research upload flow using synthetic testing.</span>
+          <span>I understand this is a draft connector/upload flow using synthetic testing.</span>
         </label>
       </section>
 
       <section class="panel" aria-labelledby="upload-title">
-        <h2 id="upload-title">Upload export</h2>
+        <h2 id="upload-title">Developer-only fallback upload preview</h2>
         <div class="dropzone">
           <input id="file-input" type="file" accept=".json,.txt,.csv,.zip" />
-          <p id="file-summary">Choose a ChatGPT, Claude, Gemini, or Copilot export file.</p>
+          <p id="file-summary">Choose a synthetic ChatGPT, Claude, Gemini, or Copilot export file.</p>
         </div>
-        <button id="submit-button" type="button" disabled>Validate and anonymize</button>
+        <button id="submit-button" type="button" disabled>Preview validation</button>
         <p id="status" class="status" role="status">Waiting for consent and a file.</p>
       </section>
 
       <section class="panel" aria-labelledby="guidance-title">
-        <h2 id="guidance-title">Export guidance</h2>
+        <h2 id="guidance-title">Connector targets</h2>
         <div class="guidance-grid">
           <article>
             <h3>ChatGPT</h3>
-            <p>Use the data export option from settings and upload the downloaded export file.</p>
+            <p>Future connector target. Manual export upload remains an early fallback.</p>
           </article>
           <article>
             <h3>Claude</h3>
-            <p>Export or copy a conversation into a supported text or JSON file when available.</p>
+            <p>Future connector target for authorized background sync and website results.</p>
           </article>
           <article>
             <h3>Gemini</h3>
-            <p>Use account export tools where available and avoid sharing account credentials.</p>
+            <p>Future connector target. The portal should never ask for account passwords.</p>
           </article>
           <article>
             <h3>Copilot</h3>
-            <p>Export conversation history only if your account and product settings allow it.</p>
+            <p>Future connector target when product settings and user authorization allow it.</p>
           </article>
         </div>
       </section>
