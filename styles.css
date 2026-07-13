@@ -102,6 +102,12 @@ h3 {
   color: var(--muted);
 }
 
+.panel-copy {
+  margin-bottom: 0;
+  color: var(--muted);
+  line-height: 1.55;
+}
+
 .consent {
   display: flex;
   gap: 10px;
